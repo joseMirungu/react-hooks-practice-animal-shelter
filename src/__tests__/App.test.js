@@ -24,8 +24,8 @@ describe("Fetching pets", () => {
   it("should fetch pet types using the type parameter based on the filter", async () => {
     render(<App />);
 
-    let type = "micropig";
-    fireEvent.change(screen.getByLabelText(/type/), {
+    const type = "micropig";
+    fireEvent.change(screen.getByLabelText(/Type/), { // Ensure the label matches exactly
       target: { value: type },
     });
 
